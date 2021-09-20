@@ -13,6 +13,40 @@
         android:scaleType="centerCrop"
         android:src="@drawable/bg_splash"/>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="130dp"
+        android:layout_height="110dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="@dimen/_150sdp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="400dp"
+        app:cardCornerRadius="@dimen/_10sdp"
+        app:cardElevation="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/img_chef"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:src="@drawable/chef" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/chef_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="cursive"
+        android:gravity="center"
+        android:text="ChefStories"
+        android:textColor="@color/white"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:typeface="normal" />
+
     <FrameLayout
 
         android:layout_width="wrap_content"
@@ -39,7 +73,7 @@
             android:layout_width="@dimen/_20sdp"
             android:layout_height="@dimen/_20sdp"
             android:layout_gravity="center"
-            android:outlineAmbientShadowColor="@color/brown"
+            android:outlineAmbientShadowColor="@color/black"
             android:id="@+id/loader"/>
 
     </FrameLayout>
