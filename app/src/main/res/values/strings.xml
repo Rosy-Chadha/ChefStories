@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ChefStories</string>
+    <string name="all_recipes">All Recipes</string>
+    <string name="category_name">Category name</string>
 </resources>
