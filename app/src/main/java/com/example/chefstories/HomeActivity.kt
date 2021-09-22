@@ -1,15 +1,25 @@
 package com.example.chefstories
 
+import android.app.SearchManager
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.Menu
+import android.widget.ArrayAdapter
+import android.widget.EditText
+import android.widget.ListView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.chefstories.adapter.MainCategoryAdapter
 import com.example.chefstories.adapter.SubCategoryAdapter
 import com.example.chefstories.database.RecipeDatabase
 import com.example.chefstories.entities.CategoryItems
 import com.example.chefstories.entities.MealsItems
+import com.example.chefstories.entities.Recipes
 import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.item_rv_sub_category.*
 import kotlinx.coroutines.launch
 
 class HomeActivity : BaseActivity() {
@@ -23,16 +33,13 @@ class HomeActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-
         getDataFromDb()
 
         mainCategoryAdapter.setClickListener(onCLicked)
         subCategoryAdapter.setClickListener(onCLickedSubItem)
 
-
-
-
     }
+
 
     private val onCLicked  = object : MainCategoryAdapter.OnItemClickListener{
         override fun onClicked(categoryName: String) {
@@ -79,4 +86,6 @@ class HomeActivity : BaseActivity() {
 
         }
     }
+
+
 }

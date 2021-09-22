@@ -84,6 +84,7 @@ class SplashActivity : BaseActivity(), EasyPermissions.RationaleCallbacks,
         })
     }
 
+
     fun insertDataIntoRoomDb(category: Category?) {
 
         launch {

@@ -16,6 +16,8 @@ interface GetDataService {
 
     @GET("lookup.php")
     fun getSpecificItem(@Query("i") id: String): Call<MealResponse>
-
+    
+    @GET("search.php")
+    fun getMealByName(@Query("s") mealName: String): Call<Meal>
 
 }
